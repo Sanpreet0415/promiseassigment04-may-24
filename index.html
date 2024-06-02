@@ -1,0 +1,85 @@
+function unitMovementCheck(averageCodingScore, averageHukumuScore, cutoff) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const scores = [averageCodingScore, averageHukumuScore];
+            const total = scores.reduce((acc, score) => acc + score, 0);
+            const average = total / scores.length;
+            if (average >= cutoff) {
+                resolve(average);
+            } else {
+                reject("Sorry you haven’t cleared the final cutoff.");
+            }<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function codingScoreCheck(marks, cutoff) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const total = marks.reduce((acc, mark) => acc + mark, 0);
+            const average = total / marks.length;
+            if (average >= cutoff) {
+                resolve(average);
+            } else {
+                reject("Sorry you haven’t cleared the coding round.");
+            }
+        }, 2000);
+    });
+}
+
+codingScoreCheck([85, 90, 78, 92, 88], 80)
+    .then((average) => console.log(`Average coding score: ${average}`))
+    .catch((error) => console.log(error));
+    function HUKUMUScoreCheck(marks, cutoff) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const total = marks.reduce((acc, mark) => acc + mark, 0);
+            const average = total / marks.length;
+            if (average >= cutoff) {
+                resolve(average);
+            } else {
+                reject("Sorry you haven’t cleared the HUKUMU round.");
+            }
+        }, 2000);
+    });
+}
+
+HUKUMUScoreCheck([70, 75, 80, 65, 85], 75)
+    .then((average) => console.log(`Average HUKUMU score: ${average}`))
+    .catch((error) => console.log(error));
+    function unitMovementCheck(averageCodingScore, averageHukumuScore, cutoff) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const scores = [averageCodingScore, averageHukumuScore];
+            const total = scores.reduce((acc, score) => acc + score, 0);
+            const average = total / scores.length;
+            if (average >= cutoff) {
+                resolve(average);
+            } else {
+                reject("Sorry you haven’t cleared the final cutoff.");
+            }
+        }, 2000);
+    });
+}
+
+unitMovementCheck(85, 78, 80)
+    .then((average) => console.log(`Final average score: ${average}`))
+    .catch((error) => console.log(error));
+
+
+</script>
+</html>
+        }, 2000);
+    });
+}
+
+// Example usage:
+unitMovementCheck(85, 78, 80)
+    .then((average) => console.log(`Final average score: ${average}`))
+    .catch((error) => console.log(error));
